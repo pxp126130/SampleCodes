@@ -1,0 +1,13 @@
+function [h] = bpf(N,Fcp1,Fcs1,Fcp2,Fcs2,Fs)
+
+fcp1 = Fcp1/Fs;
+fcs1 = Fcs1/Fs;
+
+hp = hpf(N,Fcp1,Fcs1Fs);
+hs = lpf(N,Fcp1,Fcs2,Fs);
+
+h = hp+hs;
+
+h(N/2) = 2 * (fcs - fcp);
+
+end

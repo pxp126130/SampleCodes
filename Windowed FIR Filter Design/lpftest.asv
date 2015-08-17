@@ -1,0 +1,31 @@
+clear all;
+clc;
+close all;
+
+N = 500;
+
+Fc = 10000;
+Fcp = 4000;
+Fcs = 8000;
+Fs = 30000;
+
+hl = lpf(N,Fc,Fs);
+hh = hpf(N,Fc,Fs);
+hp = bpf(N,Fcp,Fcs,Fs);
+hs = bsf(N,Fcp,Fcs,Fs);
+
+fl = abs(freqz(hl));
+fh = abs(freqz(hh));
+fp = abs(freqz(hp));
+fs = abs(freqz(hs));
+
+plot(fl)
+figure
+plot(fh)
+figure
+plot(fp)
+figure
+plot(fs)
+
+figure
+wvtool(fl)
