@@ -1,0 +1,4 @@
+This project was created as taught in the online course "C++ for complete Beginners" by John Purcell.
+This is an attempt to learn pixel manipulation and basics of SDL library.
+
+The course can be found here: http://courses.caveofprogramming.com/courses/c-beginners
